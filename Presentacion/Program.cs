@@ -1,4 +1,10 @@
 
+using Aplicacion.Interfaces;
+using Aplicacion.Servicio;
+using Dominio.Interfaces;
+using Infraestructura.Contexto;
+using Infraestructura.Persistencia.Repositorios;
+
 namespace Presentacion
 {
     public class Program
@@ -14,6 +20,11 @@ namespace Presentacion
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
 
+            builder.Services.AddSqlServer<P2Contexto>(builder.Configuration.GetConnectionString("AppConnection"));
+
+            builder.Services.AddScoped<IUsuarioServicio, UsuarioServicio>();
+            builder.Services.AddScoped<IUsuarioRegistro, UsuarioRepositorio>();
+            
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
