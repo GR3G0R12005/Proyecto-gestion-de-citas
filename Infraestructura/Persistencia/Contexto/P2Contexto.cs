@@ -1,5 +1,6 @@
 using Dominio.Entidades;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 
 namespace Infraestructura.Contexto
 {
@@ -10,5 +11,6 @@ namespace Infraestructura.Contexto
         }
 
         public DbSet<Usuario> Usuario { get; set; }
+        public DbSet<Configuracion> Configuraciones { get; set; }
     }
 }
