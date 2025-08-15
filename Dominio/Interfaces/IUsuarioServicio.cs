@@ -5,6 +5,7 @@ namespace Aplicacion.Interfaces
     public interface IUsuarioServicio
     {
         List<Usuario> ObtenerUsuarios();
-        public void SetUsuario(Usuario model);
+        public void RegistrarUsuario(Usuario model);
+        public Usuario Logearse(string correo, string contrasena);
     }
 }
