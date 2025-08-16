@@ -33,5 +33,5 @@ namespace Aplicacion.Servicio
         {
             _usuarioRegistro.SetUsuario(model);
         }
-        }
+    }
 }

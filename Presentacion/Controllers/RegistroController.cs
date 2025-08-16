@@ -54,7 +54,7 @@ namespace Presentacion.Controllers
                 Edad = usuarioRegistro.Edad,
                 Correo = usuarioRegistro.Correo?.ToLower(),
                 Contraseña = usuarioRegistro.Contraseña,
-                Roll = usuarioRegistro.Roll
+                Roll = "Cliente"
             };
 
             _usuarioServicio.RegistrarUsuario(usuario);
